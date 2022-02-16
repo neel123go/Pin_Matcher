@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin Matcher</title>
+    <!-- bootstrap Link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container overflow-hidden">
+        <div class="row gx-5" style="margin: 20px 0;">
+            <div class="col-12 col-md-6 text-center"
+                style="background-color: rgb(39, 104, 179);border: 10px solid white;">
+                <input id="pin-field" type="text" value="_ _ _ _" class="w-75 text-center fs-4 rounded-pill px-5 py-2"
+                    style="outline: none; border: none; margin-top: 100px;" readonly>
+
+                <button onclick="generatePin()" class="rounded-circle d-block p-2 mx-auto fw-bolder fs-5"
+                    style="margin-top: 250px; margin-bottom: 100px; border: none; outline: none; width: 180px; height: 180px; color: rgb(26, 86, 182);">Generate
+                    Pin</button>
+            </div>
+            <div class="col-12 col-md-6 text-center"
+                style="background-color: rgb(39, 104, 179);border: 10px solid white;">
+                <input id="display-pin" type="text" placeholder="_ _ _ _"
+                    class="w-75 text-center fs-4 rounded-pill px-5 py-2"
+                    style="outline: none; border: none; margin-top: 100px;" readonly>
+                <p id="error-msg" class="text-center text-light fs-5 my-2" style="display: none;">Pin doesn't match</p>
+                <p id="success-msg" class="text-center text-light fs-5 my-2" style="display: none;">You varified by
+                    facebook</p>
+                <p id="error2-msg" class="text-center text-light fs-5 my-2" style="display: none;">Please, generate a
+                    pin number first</p>
+
+                <div class="calculator">
+                    <table>
+                        <tr>
+                            <td><button onclick="numbers('1')">1</button></td>
+                            <td><button onclick="numbers('2')">2</button></td>
+                            <td><button onclick="numbers('3')">3</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="numbers('4')">4</button></td>
+                            <td><button onclick="numbers('5')">5</button></td>
+                            <td><button onclick="numbers('6')">6</button></td>
+                        </tr>
+                        <tr>
+                            <td><button onclick="numbers('7')">7</button></td>
+                            <td><button onclick="numbers('8')">8</button></td>
+                            <td><button onclick="numbers('9')">9</button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3"><button onclick="numbers('0')">0</button></td>
+                        </tr>
+                    </table>
+                </div>
+                <button id="submit-btn" class="rounded-pill py-2 mt-3"
+                    style="margin-bottom: 10px; border: none; outline: none; color: rgb(26, 86, 182); width: 200px; font-size: 20px;">submit</button>
+                <span class="d-flex justify-content-center align-items-center text-center">
+                    <p id="try-msg" class="text-center text-light fs-5 mt-2"><span id="try-num">3</span> tries left</p>
+                    <a id="refresh" class="text-light mb-2 ms-2" style="display: none;" href="index.html">try again</a>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <script src="pin.js"></script>
+</body>
+
+</html>

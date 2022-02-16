@@ -1,0 +1,31 @@
+.calculator{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+table input{
+    width: 90%;
+    margin-top: 5px;
+    font-size: 25px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding: 15px 12px;
+    text-align: right;
+    margin-bottom: 15px;
+    color: #303134;
+}
+table button{
+    width: 68px;
+    height: 55px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 2px 1px;
+    transition: 0.1s ease;
+}
+table button:active{
+    color: #fff;
+    background-color: #ff506d;
+}
